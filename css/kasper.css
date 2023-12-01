@@ -1,7 +1,7 @@
 /* Start Variable */
 :root {
-  --mainColor: #10cab7;
-  --secondColor: #2c4856;
+  --main-color: #19c8fa;
+  --second-color: rgb(15 116 143 /60%);
   --secondFontColor: #999;
   --padingSection: 40px;
   --section-backgraound: #f6f6f6;
@@ -30,6 +30,7 @@ ul {
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
+  min-height: 100px;
 }
 
 /* Small */
@@ -51,3 +52,176 @@ ul {
   }
 }
 /* End Global Rules */
+/* Start Header */
+header {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+header .container:after {
+  content: "";
+  width: calc(100% - 30px);
+  height: 1px;
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 15px;
+}
+header .container .logo img {
+  height: 40px;
+}
+header nav {
+  display: flex;
+  align-items: center;
+}
+header nav ul {
+  display: flex;
+}
+nav .icon-bars {
+  color: white;
+  font-size: 20px;
+  display: none;
+}
+header nav ul a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 40px 10px;
+  z-index: 2;
+  position: relative;
+  font-size: 17px;
+}
+.active,
+nav a:hover {
+  color: var(--main-color);
+  border-bottom: 1px solid var(--main-color);
+}
+nav .form:hover i,
+nav .icon-bars:hover {
+  color: var(--main-color);
+}
+header .form {
+  margin-left: 30px;
+  border-left: solid white 1px;
+  padding-left: 15px;
+}
+header .form i {
+  color: white;
+  font-size: 17px;
+}
+@media (max-width: 767px) {
+  header nav ul {
+    display: none;
+  }
+  nav .icon-bars {
+    display: block;
+  }
+  nav .icon-bars:hover + ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    left: 0;
+    background-color: #00000095;
+  }
+  header nav ul a {
+    padding: 30px;
+  }
+}
+/* End Header */
+/* Start Landing */
+.landing {
+  height: 100vh;
+  background-color: var(--second-color);
+  background-image: url(../images/landing.jpg);
+  background-size: cover;
+  position: relative;
+}
+.landing .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.landing .text {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50%;
+  background-color: var(--second-color);
+  display: flex;
+  justify-content: flex-end;
+  padding: 50px;
+}
+.landing .text .content {
+  padding-left: 20px;
+  width: 500px;
+  color: white;
+}
+@media (max-width: 767px) {
+  .landing .text {
+    width: 100%;
+    padding: 30px;
+  }
+  .landing .text .content {
+    width: 100%;
+  }
+}
+.landing .text .content h1 {
+  line-height: 1.5;
+  margin-bottom: 30px;
+  font-weight: normal;
+}
+.landing .text .content p {
+  line-height: 2;
+  font-size: 15px;
+}
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.3);
+}
+.arrow:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+.arrow-right {
+  right: 30px;
+}
+.arrow-left {
+  left: 30px;
+}
+@media (max-width: 767px) {
+  .arrow {
+    display: none;
+  }
+}
+.c {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+.c i {
+  width: 15px;
+  height: 15px;
+  border: 2px solid var(--main-color);
+  border-radius: 50%;
+  margin: 5px;
+}
+.c .c-active {
+  background-color: var(--main-color);
+}
+/* End Landing */
