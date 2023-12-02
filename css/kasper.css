@@ -189,7 +189,7 @@ header .form i {
   background-size: cover;
   position: relative;
 }
-.landing .overlay {
+.overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -206,7 +206,7 @@ header .form i {
   background-color: var(--second-color);
   display: flex;
   justify-content: flex-end;
-  padding: 50px;
+  padding: 40px;
 }
 .landing .text .content {
   padding-left: 20px;
@@ -309,3 +309,49 @@ header .form i {
   }
 }
 /* End Services */
+/* Start Design */
+/* End Design */
+.design {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-image: url(../images/design-features.jpg);
+  background-size: cover;
+  position: relative;
+  height: 600px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+.design .text,
+.design .image {
+  flex: 1;
+  position: relative;
+  z-index: 2;
+}
+.design .image {
+  text-align: center;
+}
+.design .image img {
+  position: relative;
+  bottom: -150px;
+}
+.design .text {
+  padding: 50px;
+  color: white;
+  background-color: var(--second-color);
+}
+.design .text h2 {
+  font-weight: normal;
+  margin-bottom: 40px;
+}
+.design .text li {
+  margin-bottom: 20px;
+}
+.design .text li i {
+  margin-right: 10px;
+}
+@media (max-width: 767px) {
+  .design .image {
+    display: none;
+  }
+}
