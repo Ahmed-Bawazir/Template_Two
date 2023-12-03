@@ -142,7 +142,7 @@ header nav ul a {
   position: relative;
   font-size: 17px;
 }
-.active,
+nav .active,
 nav a:hover {
   color: var(--main-color);
   border-bottom: 1px solid var(--main-color);
@@ -355,3 +355,134 @@ header .form i {
   }
 }
 /* End Design */
+/* Start Portfolio */
+.portfolio {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  position: relative;
+}
+.portfolio .shuffle {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.portfolio .shuffle li {
+  padding: 20px;
+}
+.portfolio .active,
+.portfolio .shuffle li:hover {
+  background-color: var(--main-color);
+  color: white;
+  font-weight: bold;
+}
+.portfolio .imgs-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.portfolio .box {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .portfolio .box {
+    width: 50%;
+  }
+}
+@media (min-width: 1200px) {
+  .portfolio .box {
+    width: 25%;
+  }
+}
+.portfolio .box img {
+  max-width: 100%;
+  transition: 0.3s;
+}
+.portfolio .box .caption {
+  padding: 20px;
+  background-color: white;
+  position: absolute;
+  width: 100%;
+  bottom: -85px;
+  transition: 0.3s;
+}
+.portfolio .box:hover .caption {
+  bottom: 0;
+  transition: 0.3s;
+}
+.portfolio .box:hover img {
+  transform: rotate(3deg) scale(1.1);
+  transition: 0.3s;
+}
+.portfolio .box .caption h4 {
+  display: block;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+.portfolio .box .caption p {
+  color: var(--main-color);
+}
+.portfolio-content a {
+  display: block;
+  padding: 20px;
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  background-color: var(--main-color);
+  margin: 50px auto;
+  width: fit-content;
+}
+.portfolio-content a:hover {
+  background-color: var(--second-color);
+  font-weight: bold;
+}
+/* End Portfolio */
+/* Start Video */
+.video {
+  position: relative;
+}
+
+.video video {
+  width: 100%;
+}
+.video .text {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translatey(-50%);
+  background-color: var(--second-color);
+  color: white;
+  text-align: center;
+  padding: 50px;
+}
+
+.video .text h2 {
+  margin-bottom: 20px;
+  font-weight: normal;
+}
+.video .text p {
+  margin-bottom: 30px;
+}
+.video .text a {
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+}
+.video .text a:hover {
+  font-weight: bolder;
+}
+@media (max-width: 767px) {
+  .video .text {
+    padding: 30px;
+  }
+  .video .text h2 {
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+  .video .text p {
+    margin-bottom: 20px;
+  }
+}
+/* End Video */
