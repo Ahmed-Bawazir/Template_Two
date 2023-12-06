@@ -30,7 +30,6 @@ ul {
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
-  
 }
 
 /* Small */
@@ -252,7 +251,7 @@ header .form i {
     display: none;
   }
 }
-.c {
+.landing .c {
   position: absolute;
   bottom: 20px;
   left: 50%;
@@ -540,5 +539,249 @@ header .form i {
     width: 25%;
   }
 }
-
 /* End About */
+/* Start Skills */
+.our-skills {
+  padding-bottom: 100px;
+  position: relative;
+}
+.our-skills .container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.our-skills .container .testimonials,
+.our-skills .container .skills {
+  width: 50%;
+  padding: 0 20px;
+}
+@media (max-width: 991px) {
+  .our-skills .container .testimonials,
+  .our-skills .container .skills {
+    width: 100%;
+    margin-bottom: 100px;
+  }
+}
+.our-skills .container .title {
+  margin-bottom: 60px;
+  text-align: center;
+}
+.our-skills .container .title h3 {
+  font-weight: normal;
+  margin: 0 0 30px;
+}
+.our-skills .container .title p {
+  color: var(--second-font-color);
+  line-height: 1.8;
+}
+.our-skills .container .persons {
+  position: relative;
+}
+.our-skills .container .person {
+  display: flex;
+  margin-bottom: 50px;
+  position: relative;
+}
+.our-skills .container .person p {
+  color: var(--second-font-color);
+  text-align: right;
+}
+.our-skills .container .person img {
+  max-width: 100px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+.our-skills .container .person .text {
+  flex: 1;
+  line-height: 1.6;
+  border-bottom: 2px solid var(--second-font-color);
+}
+@media (max-width: 767px) {
+  .our-skills .container .person {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .our-skills .container .person img {
+    margin-bottom: 30px;
+  }
+  .our-skills .container .person .text {
+    padding-bottom: 10px;
+  }
+}
+.our-skills .c {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  margin-top: 30px;
+}
+.our-skills .prog-holder h4 {
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+.our-skills .prog-holder .prog {
+  position: relative;
+  height: 30px;
+  width: 100%;
+  background-color: #aaa;
+  margin-bottom: 30px;
+}
+.our-skills .prog-holder .prog span {
+  display: block;
+  background-color: var(--main-color);
+  height: 100%;
+  position: relative;
+}
+.our-skills .prog-holder .prog span::after {
+  content: attr(data-prog);
+  position: absolute;
+  right: -21px;
+  top: calc(-100% + -8px);
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  padding: 5px;
+}
+.our-skills .prog-holder .prog span::before {
+  content: "";
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  border: 10px solid transparent;
+  border-top-color: black;
+}
+/* End Skills */
+/* Start Quote */
+.quote {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  position: relative;
+  background-image: url(../images/quote.jpg);
+  background-size: cover;
+}
+.quote q {
+  position: relative;
+  color: white;
+  display: block;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.quote span {
+  position: relative;
+  color: white;
+  display: block;
+  text-align: center;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: bold;
+}
+/* End Quote */
+/* Start Pricing */
+.pricing {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.pricing-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.pricing-content .column {
+  width: 23%;
+  text-align: center;
+  background-color: #f6f6f6;
+  margin-bottom: 30px;
+}
+@media (max-width: 992px) {
+  .pricing-content .column {
+    width: 31%;
+  }
+}
+@media (max-width: 767px) {
+  .pricing-content .column {
+    width: 48%;
+  }
+}
+@media (max-width: 600px) {
+  .pricing-content .column {
+    width: 98%;
+  }
+}
+.pricing-content .column .head {
+  padding: 30px;
+  border-bottom: 1px solid var(--main-color);
+  border-top: 1px solid var(--main-color);
+}
+.pricing-content .column .head h3 {
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+.pricing-content .column .head span {
+  font-size: 50px;
+  font-weight: bold;
+}
+.pricing-content .column .head span::before {
+  content: "$";
+  position: relative;
+  top: -28px;
+  left: -5px;
+  font-size: 22px;
+  font-weight: normal;
+}
+.pricing-content .column .head span:after {
+  content: "/Mo";
+  position: relative;
+  bottom: 0;
+  right: -10px;
+  font-size: 17px;
+}
+.pricing-content .column ul {
+  padding-inline: 40px;
+  border-bottom: 1px solid var(--main-color);
+}
+.pricing-content .column ul li {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 14px;
+}
+.pricing-content .column ul li:not(:last-child) {
+  border-bottom: 1px solid var(--main-color);
+}
+.pricing-content .column .buy {
+  padding: 30px;
+}
+.pricing-content .column .buy a {
+  display: block;
+  border: solid 1px var(--main-color);
+  padding: 15px;
+  text-decoration: none;
+  border-radius: 4px;
+  color: var(--second-font-color);
+}
+.pricing-content .column .buy a:hover {
+  color: white;
+  background-color: var(--second-color);
+}
+.pricing .container p {
+  text-align: center;
+  font-size: 20px;
+}
+.pricing .container p + a {
+  display: block;
+  margin: 30px auto;
+  width: 120px;
+  text-align: center;
+  border: solid 1px var(--second-color);
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 4px;
+  color: white;
+  background-color: var(--main-color);
+}
+.pricing .container p + a:hover {
+  background-color: var(--second-color);
+}
+/* End Pricing  */
+
